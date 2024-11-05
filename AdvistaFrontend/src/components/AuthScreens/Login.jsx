@@ -25,7 +25,7 @@ const Login = () => {
         const code = authResult.code;
         console.log("Google auth code:", code);
         
-        const response = await fetch(`http://localhost:5000/api/auth/google?code=${code}`, {
+        const response = await fetch(`https://advista.vercel.app/api/auth/google?code=${code}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ const Login = () => {
 
   
   const handleFacebookLogin = async () => {
-    // window.open("http://localhost:5000/api/auth/facebook", "_self");
+    // window.open("https://advista.vercel.app/api/auth/facebook", "_self");
     navigate('/excess-token')
   };
   
@@ -73,7 +73,7 @@ const Login = () => {
     setErrorMessage("");
 
     try {
-      const response = await fetch('http://localhost:5000/api/auth/login', {
+      const response = await fetch('https://advista.vercel.app/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

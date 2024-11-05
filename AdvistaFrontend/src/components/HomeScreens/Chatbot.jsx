@@ -23,7 +23,7 @@ const Chatbot = () => {
 
     try {
       // Send the messages to the backend to communicate with OpenAI API
-      const res = await axios.post('http://localhost:5000/api/chat/chatbot', {
+      const res = await axios.post('https://advista.vercel.app/api/chat/chatbot', {
         messages: newMessages,
       });
       console.log('res:',res);

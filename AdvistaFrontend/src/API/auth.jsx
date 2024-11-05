@@ -10,7 +10,7 @@ export const AuthProvider = ({ children }) => {
   const isLoggedIn=!!token;
   const userAuthenticte=async()=>{
     try {
-        const response=await fetch('http://localhost:5000/api/auth/user',{
+        const response=await fetch('https://advista.vercel.app/api/auth/user',{
           method:"GET",
           headers:{
             'Authorization':`Bearer ${token}`

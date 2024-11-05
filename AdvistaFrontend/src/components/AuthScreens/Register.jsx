@@ -24,7 +24,7 @@ const Signup = () => {
         console.log("Google auth code:", code);
         
         // Fetching the token and user details from your backend
-        const response = await fetch(`http://localhost:5000/api/auth/google?code=${code}`, {
+        const response = await fetch(`https://advista.vercel.app/api/auth/google?code=${code}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -70,7 +70,7 @@ const Signup = () => {
   const handleEmailSignup = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/api/auth/register', {
+      const response = await fetch('https://advista.vercel.app/api/auth/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

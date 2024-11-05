@@ -23,7 +23,7 @@ const FacebookLoginPage = () => {
 
     //   try {
         
-    //     const res = await axios.post('http://localhost:5000/api/auth/facebook', userInfo);
+    //     const res = await axios.post('https://advista.vercel.app/api/auth/facebook', userInfo);
         
     //     if (res.data.success) {
     //       setUserData(res.data.user); 

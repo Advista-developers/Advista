@@ -58,12 +58,12 @@ passport.use(
 app.use(express.json());
 app.use(cors(
   {
-    origin:"https://advista.vercel.app",
+    origin:"https://advista-api.vercel.app",
     methods:"GET,POST,PATCH,PUT,DELETE",
     Credentials:true,
   }
 ));
-const allowedOrigins = ['https://advista.vercel.app']; // Adjust for production
+const allowedOrigins = ['https://advista-api.vercel.app']; // Adjust for production
 
 const corsOptions = {
   origin: allowedOrigins,

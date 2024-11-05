@@ -30,7 +30,7 @@ export const AuthProvider = ({ children }) => {
   }
   useEffect(() => {
     
-    userAuthenticte();
+    // userAuthenticte();
   }, []);
   // localStorage.clear();
   //function to stored the token in local storage

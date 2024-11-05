@@ -1,13 +1,13 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
+// import App from './App.jsx'
 import './index.css'
 import { BrowserRouter, createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
 import Layout from './Layout.jsx'
 import Home from './components/HomeScreens/Home.jsx'
 import Login from './components/AuthScreens/Login.jsx'
 import Register from './components/AuthScreens/Register.jsx'
-import NotFound from './components/GeneralScreens/Notfound.jsx'
+// import NotFound from './components/GeneralScreens/Notfound.jsx'
 import {  GoogleOAuthProvider} from '@react-oauth/google'
 import { AuthProvider } from './API/auth';
 import { Logout } from './components/AuthScreens/Logout.jsx'
@@ -40,7 +40,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     
     <>
-      <Route path='*' element={<NotFound/>}/>
+      {/* <Route path='*' element={<NotFound/>}/> */}
       <Route path='/' element={<Layout />}>
         <Route index element={<Home />} />
       </Route>

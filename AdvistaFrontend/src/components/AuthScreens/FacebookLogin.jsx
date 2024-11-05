@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import FacebookLogin from 'react-facebook-login';
+// import FacebookLogin from 'react-facebook-login';
 import axios from 'axios'; // Import axios for API calls
 import background from '../../../public/assets/background.png';
 import Home from '../HomeScreens/Home';
@@ -73,6 +73,14 @@ const FacebookLoginPage = () => {
                 </button>
               )}
             />
+            <div>
+            <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold flex items-center justify-center w-full">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M22.676 0H1.324C.593 0 0 .592 0 1.323v21.354C0 23.407.593 24 1.324 24h11.495v-9.294H9.847v-3.622h2.973V8.41c0-2.953 1.804-4.561 4.437-4.561 1.26 0 2.343.093 2.656.135v3.08l-1.825.001c-1.43 0-1.706.678-1.706 1.672v2.192h3.413l-.444 3.622h-2.97V24h5.816C23.407 24 24 23.407 24 22.677V1.323C24 .592 23.407 0 22.676 0z" />
+                  </svg>
+                  Connect Facebook
+                </button>
+            </div>
             <div className="mt-6 text-gray-400">
               <span className="text-sm">Meta</span> + <span className="text-sm">Google Partners</span>
             </div>

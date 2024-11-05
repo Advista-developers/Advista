@@ -110,7 +110,7 @@ const Login = () => {
           <img className="w-24" src={logo} alt="Logo" />
         </div>
         <p className="text-center text-gray-700 mb-4 text-lg font-semibold">
-          The SuperApp for Meta Advertisers
+          The for Meta Advertisers
         </p>
 
         {showEmailLogin ? (

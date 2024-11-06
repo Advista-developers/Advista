@@ -88,7 +88,7 @@ app.use((req, res, next) => {
 
 // app.use(cors(corsOptions));
 // app.use(cors());
-app.use("/api", IndexRoute );
+app.use("/web", IndexRoute );
 app.get("/",(req,res)=>{
   res.send("Hello Sir");
 })

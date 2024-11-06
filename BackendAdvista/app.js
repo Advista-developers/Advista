@@ -63,25 +63,40 @@ app.use(cors(
     Credentials:true,
   }
 ));
-const allowedOrigins = ['https://advista-api.vercel.app']; // Adjust for production
 
-const corsOptions = {
-  origin: allowedOrigins,
-  credentials: true, // Allow cookies for authenticated requests
-  optionsSuccessStatus: 200, // HTTP status code for preflight requests
-};
+const allowedOrigins = [
+  'https://advista-api.vercel.app',
+  'https://your-frontend-url.vercel.app',
+  'https://advista-api-advista-developers-projects.vercel.app',
+  'https://advista-api-git-main-advista-developers-projects.vercel.app'
+];
 
-app.use(cors(corsOptions));
-app.use(cors());
+app.use((req, res, next) => {
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+  }
+  res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+})
+// const corsOptions = {
+//   origin: allowedOrigins,
+//   credentials: true, // Allow cookies for authenticated requests
+//   optionsSuccessStatus: 200, // HTTP status code for preflight requests
+// };
+
+// app.use(cors(corsOptions));
+// app.use(cors());
 app.use("/api", IndexRoute );
 app.get("/",(req,res)=>{
   res.send("Hello Sir");
 })
-const PORT = process.env.PORT || 5000;
+// const PORT = process.env.PORT || 5000;
 
-const server = app.listen(PORT, () => {
-    console.log(`Example app listening on http://localhost:${PORT}`);
-  });
+// const server = app.listen(PORT, () => {
+//     console.log(`Example app listening on http://localhost:${PORT}`);
+//   });
 
   // const OpenAI = require('openai');  // Directly import the OpenAI class
 
